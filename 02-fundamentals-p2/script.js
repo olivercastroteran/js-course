@@ -174,7 +174,7 @@ for (let i = me.length - 1; i >= 0; i--) {
 
 // ------------- while loop -------------
 // Usefull when we dont know haw many repetitions there will be, just checks if its condition is true
-/*
+
 let rep = 1;
 
 while (rep <= 10) {
@@ -187,29 +187,25 @@ let dice2 = Math.trunc(Math.random() * 6) + 1;
 let dice3 = Math.trunc(Math.random() * 6) + 1;
 let dice4 = Math.trunc(Math.random() * 6) + 1;
 let dice5 = Math.trunc(Math.random() * 6) + 1;
-let dice6 = Math.trunc(Math.random() * 6) + 1;
 
 let throws = 0;
 
-console.log(dice1, dice2, dice3, dice4, dice5, dice6);
+console.log(dice1, dice2, dice3, dice4, dice5);
 
 while (
   dice1 !== dice2 ||
   dice2 !== dice3 ||
   dice3 !== dice4 ||
-  dice4 !== dice5 ||
-  dice5 !== dice6
+  dice4 !== dice5
 ) {
-  console.log(dice1, dice2, dice3, dice4, dice5, dice6);
+  console.log(dice1, dice2, dice3, dice4, dice5);
 
   dice1 = Math.trunc(Math.random() * 6) + 1;
   dice2 = Math.trunc(Math.random() * 6) + 1;
   dice3 = Math.trunc(Math.random() * 6) + 1;
   dice4 = Math.trunc(Math.random() * 6) + 1;
   dice5 = Math.trunc(Math.random() * 6) + 1;
-  dice6 = Math.trunc(Math.random() * 6) + 1;
   throws++;
 }
 console.log(throws);
-console.log(dice1, dice2, dice3, dice4, dice5, dice6);
-*/
+console.log(dice1, dice2, dice3, dice4, dice5);
