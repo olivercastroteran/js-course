@@ -62,3 +62,87 @@ var numProducts = 10;
 function deleteCart() {
   console.log('All products deleted!');
 }
+
+console.log(this);
+
+const calcAge = function () {
+  console.log(this);
+};
+
+const calcAgeArr = () => {
+  console.log(this);
+};
+
+calcAge();
+calcAgeArr();
+
+const oliver = {
+  firstName: 'Oliver',
+  year: 1993,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+
+    const isMillennial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+
+    isMillennial();
+  },
+  greet: () => console.log(`Hey ${this.firstName}`), // this = Global object => clg undefined
+};
+
+const melissa1 = {
+  year: 1999,
+};
+// Method borrowing
+melissa1.calcAge = oliver.calcAge;
+
+oliver.calcAge();
+melissa1.calcAge();
+
+////////////////////////////
+// Object Reference in Practice (Shallow vs Deep copies)
+
+const melissa2 = {
+  firstName: 'Melissa',
+  lastName: 'Carvajal',
+  age: 27,
+};
+
+function marryPerson(person, newLastName) {
+  person.lastName = newLastName;
+  return person;
+}
+
+// const marriedMelissa = melissa;
+// marriedMelissa.lastName = 'Castro';
+
+console.log('Before:', melissa2);
+console.log('after:', marriedMelissa);
+
+const melissa = {
+  firstName: 'Melissa',
+  lastName: 'Carvajal',
+  age: 27,
+  family: ['Oliver', 'Thomas'],
+};
+
+// 1 Level copy - Shallow Copy
+const melissaCopy = { ...melissa };
+melissaCopy.lastName = 'Castro';
+
+console.log(melissa, melissaCopy);
+
+melissaCopy.family.push('Bianca');
+
+console.log('Before:', melissa);
+console.log('After:', melissaCopy);
+
+// Deep Copy/Clone
+const melissaClone = structuredClone(melissa);
+melissaClone.family.push('To be defined');
+
+console.log('Original', melissa);
+console.log('Clone', melissaClone);
