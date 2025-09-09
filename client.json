@@ -1,0 +1,29 @@
+{
+  "client_profile": {
+    "budget": {
+      "min": 400000,
+      "max": 1500000,
+      "currency": "USD",
+      "flexibility": "unknown"
+    },
+    "main_goals": ["citizenship_by_investment", "rental_income"],
+    "property_usage": "rent_it_out",
+    "lifestyle_preferences": [
+      "family_friendly_area",
+      "close_to_schools",
+      "high_rental_demand_area"
+    ],
+    "timeline": "within_3_months",
+    "ai_extracted_insights": {
+      "has_children": true,
+      "risk_profile": "moderate_cautious",
+      "decision_style": "analytical_and_security_focused",
+      "primary_concerns": [
+        "wrong_location",
+        "resale_value",
+        "rental_income_accuracy"
+      ],
+      "recommended_sales_approach": "Lead with citizenship eligibility, rental demand, resale strength, and family-friendly location advantages."
+    }
+  }
+}
