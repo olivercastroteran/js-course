@@ -1,0 +1,15 @@
+# Complete Security-Hardened pnpm Configuration
+minimumReleaseAge: 10080 # 7 days in minutes
+minimumReleaseAgeStrict: true
+minimumReleaseAgeExclude:
+  - 'typescript'
+trustPolicy: no-downgrade
+blockExoticSubdeps: true
+
+allowBuilds:
+  '0': esbuild
+  '1': sharp
+  '@parcel/watcher': true
+  '@swc/core': true
+  lmdb: true
+  msgpackr-extract: true
